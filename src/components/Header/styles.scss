@@ -79,12 +79,14 @@ header {
 
                     a {
                         font-size: 1.8rem;
+                        font-weight: 700;
                         line-height: 6.5rem;
                         vertical-align: middle;
                         color: black;
                         text-decoration: none;
                         text-transform: uppercase;
                         cursor: pointer;
+                        opacity: 0.6;
 
                         @media (max-width: 992px) {
                             font-size: 20px;
