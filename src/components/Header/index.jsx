@@ -15,9 +15,9 @@ const Header = () => {
                 <nav className="navigation">
                     <ul>
                         <li>
-                            <a href="/">
+                            <NavLink to="/home">
                                 Home
-                            </a>
+                            </NavLink>
                         </li>
                         <li className="aboutUs">
                             <NavLink to="/aboutUs" activeClassName="aboutUs_active">
