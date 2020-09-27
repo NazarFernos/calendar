@@ -11,20 +11,20 @@ const Main = () => {
                 <div className="textbox">
                     <div className="title">
                         <h1>
-                            Choose the day  <br /> for the meeting
+                            Choose the day <br/> for the meeting
                         </h1>
                     </div>
                     <div className="text">
                         <h4>
-                            We encourage you to book your <br />
-                            appointment online. <br />
+                            We encourage you to book your <br/>
+                            appointment online. <br/>
                             This will save you time.
                         </h4>
                     </div>
                 </div>
             </div>
             <div className="calendar">
-                <DatePicker />
+                <DatePicker/>
             </div>
         </main>
     )

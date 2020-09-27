@@ -1,6 +1,7 @@
 {
   "name": "WeRdevs",
   "author": "Nazar Fernos",
+  "homepage": "https://NazarFernos.github.io/calendar/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

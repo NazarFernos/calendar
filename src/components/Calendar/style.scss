@@ -1,10 +1,10 @@
 @import "../Button/style.scss";
 
 .date-picker {
-	width: 500px;
-	padding: 0 48px 16px;
-    box-shadow: 0 24px 32px 0 rgba(1, 1, 1, 0.05);
-  
+  width: 500px;
+  padding: 0 48px 16px;
+  box-shadow: 0 24px 32px 0 rgba(1, 1, 1, 0.05);
+
   @media (min-width: 400px) {
     margin-top: 16px;
   }
@@ -19,102 +19,102 @@
 }
 
 .date-picker__head {
-	display: flex;
-	align-items: center;
-  	justify-content: space-between;
-  
-	li {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: gray;
-    
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+
     button {
-			color: gray;
-			font-size: 22px;
-		}
+      color: gray;
+      font-size: 22px;
+    }
   }
-  
-	.button {
-		+ {
-			.button {
-				margin-left: 16px;
-			}
-		}
-	}
+
+  .button {
+    + {
+      .button {
+        margin-left: 16px;
+      }
+    }
+  }
 }
 
 hr {
-	background-color: gray;
-	height: 2px;
-	width: 370px;
-	margin: 0 auto;
+  background-color: gray;
+  height: 2px;
+  width: 370px;
+  margin: 0 auto;
 }
 
 .date-picker__month {
-	padding: 24px 0;
-	font-size: 16px;
-	font-weight: 400;
-	text-align: center;
-	color: white;
+  padding: 24px 0;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  color: white;
 }
 
 .date-picker__week {
-	padding: 16px 0;
-	font-size: 16px;
-	font-weight: 400;
-	color: white;
-	border-bottom: 1px solid rgba(1, 1, 1, 0.1);
-  
+  padding: 16px 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  border-bottom: 1px solid rgba(1, 1, 1, 0.1);
+
   &::after {
-		content: "";
-		display: block;
-		clear: both;
+    content: "";
+    display: block;
+    clear: both;
   }
-  
-	li {
-		float: left;
-		width: calc(100%/7);
-		text-align: center;
-		text-transform: uppercase;
-		list-style: none;
-	}
+
+  li {
+    float: left;
+    width: calc(100% / 7);
+    text-align: center;
+    text-transform: uppercase;
+    list-style: none;
+  }
 }
 
 .date-picker__days {
 
-	&::after {
-		content: "";
-		display: block;
-		clear: both;
-		border: none;
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+    border: none;
   }
-  
-	li {
-		float: left;
-		width: calc(100%/7);
-		list-style: none;
-	}
+
+  li {
+    float: left;
+    width: calc(100% / 7);
+    list-style: none;
+  }
 }
 
 .date-picker__day {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 14px;
-	width: 48px;
-	height: 48px;
-	margin: 0 auto;
-	border: none;
-	color: white;
-	background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  border: none;
+  color: white;
+  background-color: transparent;
 }
 
 .date-picker__day--out {
-	color: gray;
+  color: gray;
 }
 
 .date-picker__day--picked {
-	background-color: yellow;
+  background-color: yellow;
 }
 

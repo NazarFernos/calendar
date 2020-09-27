@@ -9,14 +9,14 @@ const initialState = {
 }
 
 
-const calendarReducer =  (state = initialState, action) => {
+const calendarReducer = (state = initialState, action) => {
     switch (action.type) {
         case calendarTypes.CHANGE_DATE:
-            return {...state, date: action.payload }
+            return {...state, date: action.payload}
         case calendarTypes.MODAL_ACTIVITY:
-            return {...state, hideModal: action.payload }
+            return {...state, hideModal: action.payload}
         case calendarTypes.SELECT_DATE:
-            return {...state, selectedDate: action.payload }
+            return {...state, selectedDate: action.payload}
         default:
             return state
     }
