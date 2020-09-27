@@ -23,3 +23,7 @@ code {
   box-sizing: border-box;
   -webkit-font-smoothing: subpixel-antialiased;
 }
+
+.d-flex {
+  display: flex;
+}

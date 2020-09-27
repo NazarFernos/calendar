@@ -1,15 +1,16 @@
 import React from 'react';
 import classNames from 'classnames';
 
+
 const mapDates = ({ date, className, onClick }) => (
   <li key={date.unix()}>
     <button className={className} onClick={onClick}>{date.format('DD')}</button>
   </li>
 );
 
-const Days = ({ shown, picked, onPick, toggleModal }) => {
+const Days = ({ shownDate, picked, onPick, toggleModal }) => {
 
-  const days = shown
+  const days = shownDate
     .clone()
     .startOf('month')
     .startOf('week');
@@ -23,7 +24,7 @@ const Days = ({ shown, picked, onPick, toggleModal }) => {
       .add(dates.length, 'days');
     
     const className = classNames('date-picker__day', {
-      'date-picker__day--out': !date.isSame(shown, 'month'),
+      'date-picker__day--out': !date.isSame(shownDate, 'month'),
       'date-picker__day--picked': date.isSame(picked, 'day'),
     });
 

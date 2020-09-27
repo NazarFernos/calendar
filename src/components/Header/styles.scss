@@ -1,29 +1,48 @@
 header {
-    height: 6.5rem;
+    height: 112px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
 
-    .container {
+    .container_header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        flex-wrap: wrap;
         position: relative;
-        height: 100%;
-        //max-width: 1450px;
         margin: 0 auto;
+        
 
         .logo {
             width: 13.0rem;
-            //position: absolute;
             left: 10px;
             top: 50%;
-            // -webkit-transform: translateY(-50%);
-            // --moz-transform: translateY(-50%);
-            // transform: translateY(-50%);
+
+            @media (max-width: 992px) {
+                width: 9.0rem;
+            }
+
+            @media (max-width: 768px) {
+                width: 9.0rem;
+            }
+
+            @media (max-width: 420px) {
+                width: 9.0rem;
+            }  
 
             img {
-                //display: block;
                 width: 100%;
                 margin: 1rem 1rem 1rem 1rem;
+
+                @media (max-width: 992px) {
+                    width: 80%;
+                }
+
+                @media (max-width: 768px) {
+                    width: 80%;                
+                }
+
+                @media (max-width: 420px) {
+                    width: 80%;                
+                }
             }
         }
 
@@ -39,10 +58,24 @@ header {
 
             ul {
                 text-align: center;
+                
                 li {
                     display: inline-block;
                     margin: 0 1rem;
                     list-style-type: none;
+                    position: relative;
+
+
+                    .aboutUs_active::after {
+                        content: "";
+                        width: 14px;
+                        height: 14px;
+                        background-color: #fdd000;
+                        position: absolute;
+                        border-radius: 50%;
+                        bottom: 2%;
+                        right: 40%;
+                      }
 
                     a {
                         font-size: 1.8rem;
@@ -52,9 +85,27 @@ header {
                         text-decoration: none;
                         text-transform: uppercase;
                         cursor: pointer;
+
+                        @media (max-width: 992px) {
+                            font-size: 20px;
+                            line-height: 2.2rem;
+                        }
+        
+                        @media (max-width: 768px) {
+                            font-size: 20px;
+                            line-height: 2.2rem;
+                        }
+        
+                        @media (max-width: 420px) {
+                            font-size: 20px;
+                            line-height: 2.2rem;
+                        }
+        
                     }
                 }
             }
         }
     }
-}    
+    
+    
+}

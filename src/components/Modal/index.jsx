@@ -9,7 +9,7 @@ const Modal = ({ hideModal, toggleModal, children }) => {
 
   return (
     <>
-      <div className="modalOverlay" onClick={() => toggleModal()} />
+      <div className="modalOverlay" onClick={() => toggleModal} />
       <div className="modal">
         {children}
       </div>

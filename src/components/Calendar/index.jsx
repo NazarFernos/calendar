@@ -1,87 +1,81 @@
-import React, { Component } from 'react';
-import moment from 'moment';
+import React from 'react';
 import Button from '../Button';
 import Week from './Week';
 import Days from './Days';
 import Modal from '../Modal';
-import { setDate } from '../../redux/Calendar/actions';
-import './style.css';
+import './style.scss';
+import { useDispatch, useSelector } from 'react-redux';
+import calendarTypes from '../../redux/Calendar/types';
 
 
-class DatePicker extends Component {
-  constructor() {
-    super()
-    this.state = {
-      shown: moment(),
-      hideModal: true
-    };
-  }
+const mapState = ({ calendar }) => ({
+  shownDate: calendar.date,
+  hideModal: calendar.hideModal,
+  selectDate: calendar.selectedDate
+});
 
-  showMonth(months) {
+const DatePicker = () => {
 
-    const shown = this.state.shown
-      .clone().add(months, 'months');
+  const { shownDate, hideModal, selectDate } = useSelector(mapState);
+  const dispatch = useDispatch();
 
-    this.setState({shown});
-  }
-
-  quickPick(days) {
-
-    const picked = moment().add(days, 'days');
-    const shown = picked.clone();
-
-    this.setState({picked, shown});
-  }
-
-  pick(date) {
-
-    const picked = date.clone();
-    const shown = picked.clone();
-
-    this.setState({ picked, shown });
-  }
-
-
-  toggleModal() {
-
-    const hideModal = !this.state.hideModal;
-
-    this.setState({ hideModal });
-  }
-
-  configModal() {
-
+  const showMonth = (months) => {
     return {
-      hideModal: this.state.hideModal,
-      toggleModal: this.toggleModal()
+      type: calendarTypes.CHANGE_DATE, 
+      payload: shownDate.clone().add(months, 'months'),
+    }
+  }
+  
+  const pick = (selectDate) => {
+    
+    return {
+      type: calendarTypes.SELECT_DATE, 
+      payload: selectDate
+    }
+  }
+
+  const toggleModal = () => {
+    return {
+      type: calendarTypes.MODAL_ACTIVITY, 
+      payload: !hideModal
+    }
+  }
+
+  const configModal = () => {
+    return {
+      hideModal: hideModal,
+      toggleModal: dispatch(toggleModal())
     }
   };
 
-  render() {
-    const { shown, picked, hideModal } = this.state;
-    const { setDate } = this.props;
-    //console.log(store.getState())
     return (
       <div className="date-picker">
         <ul className="date-picker__head">
           <li>
-            <Button filled onClick={ () => this.showMonth(-1) }>‹</Button>
+            <Button filled onClick={ () => dispatch(showMonth(-1)) }>‹</Button>
           </li>
           <li>
-            <div className="date-picker__month">{shown.format('MMMM YYYY')}</div>
+            <div className="date-picker__month">{shownDate.format('MMMM YYYY')}</div>
           </li>
           <li>
-            <Button filled onClick={() => this.showMonth(1)}>›</Button>
+            <Button filled onClick={() => dispatch(showMonth(1))}>›</Button>
           </li>
         </ul>
         <hr />
-          <Days shown={shown} picked={picked} onPick={ date => this.pick(date) } toggleModal={() => this.toggleModal()} />
+          <Days shownDate={shownDate} picked={selectDate} onPick={ selectDate => dispatch(pick(selectDate)) } toggleModal={() => dispatch(toggleModal())} />
         <hr />
         <Week />
         <hr />
-        {hideModal === true && (<Modal {...this.configModal}>
+        {hideModal === true && (<Modal {...configModal}>
           <div className="modalContainer">
-            <div className="inp">
+            <div className="d-flex">
+              <button
+                className="hideModal"
+                onClick={() => dispatch(toggleModal())}>
+                ×
+              </button>
+            </div>
+            <div className="modal_fields">
               <div className="inputs">
                 <div>
                   <label htmlFor="month">Month</label>
@@ -89,7 +83,7 @@ class DatePicker extends Component {
                 <input
                   id="month"
                   type="text"
-                  value={shown.format('MMMM')}
+                  value={selectDate.format('MMMM')}
                   readOnly
                 />
               </div>
@@ -100,23 +94,16 @@ class DatePicker extends Component {
                 <input
                   id="day"
                   type="text"
-                  value={shown.format('Do dddd' )}
+                  value={selectDate.format('Do dddd' )}
                   readOnly
                 />
               </div>
             </div>
-            
-            <button 
-              className="hideModal"
-              onClick={() => this.toggleModal()}>
-                ×
-            </button>
           </div>
-          
-      </Modal>)}
+        </Modal>)}
       </div>
     );
-  }
+  
 }
 
 export default DatePicker;

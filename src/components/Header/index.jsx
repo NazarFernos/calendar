@@ -1,14 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+import { NavLink } from 'react-router-dom';
+import logo from '../../assets/logo.svg';
 import './styles.scss';
 
 const Header = () => {
 
     return (
         <header>
-            <div className="container">
+            <div className="container_header">
                 <div className="logo">
-                    <img src={logo} alt='logo'></img>
+                    <img src={logo} alt='alt_logo'></img>
                 </div>
                 <div>
                 <nav className="navigation">
@@ -18,10 +19,10 @@ const Header = () => {
                                 Home
                             </a>
                         </li>
-                        <li>
-                            <a href="/">
+                        <li className="aboutUs">
+                            <NavLink to="/aboutUs" activeClassName="aboutUs_active">
                                 About Us
-                            </a>
+                            </NavLink>
                         </li>
                     </ul>
                 </nav>

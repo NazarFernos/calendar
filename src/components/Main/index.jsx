@@ -3,7 +3,7 @@ import DatePicker from '../Calendar';
 import './styles.scss';
 
 
-const Main = props => {
+const Main = () => {
 
     return (
         <main className="main">
@@ -14,7 +14,7 @@ const Main = props => {
                             Choose the day  <br /> for the meeting
                         </h1>
                     </div>
-                    <div className="desc">
+                    <div className="text">
                         <h4>
                             We encourage you to book your <br />
                             appointment online. <br />

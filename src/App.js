@@ -1,13 +1,17 @@
 import React from 'react';
-import './App.css';
-import Header from './components/Header/index';
-import Main from './components/Main/index';
+import { Redirect, Route, Switch } from 'react-router-dom';
+import AboutUs from './pages/AboutUs/index';
+import HomePage from './pages/Homepage';
+
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Main />
+      <Switch>
+        <Route path="/" component={HomePage}/>
+        <Route path="/aboutUs" component={AboutUs}/>
+        <Redirect to="/" />
+      </Switch>
     </div>
   );
 }

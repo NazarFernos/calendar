@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import './style.css';
+import './style.scss';
 
 const Button = ({ type, filled, ...rest }) => {
   const props = {
@@ -14,12 +13,6 @@ const Button = ({ type, filled, ...rest }) => {
   return <button {...props} type={type} />;
 };
 
-Button.propTypes = {
-  children: PropTypes.node.isRequired,
-  type: PropTypes.string,
-  filled: PropTypes.bool,
-  onClick: PropTypes.func,
-};
 
 Button.defaultProps = {
   onClick: undefined,
