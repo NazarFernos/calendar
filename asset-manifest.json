@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.870a4619.chunk.css",
-    "main.js": "/static/js/main.d341724a.chunk.js",
-    "main.js.map": "/static/js/main.d341724a.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.4ebfe112.js",
-    "runtime-main.js.map": "/static/js/runtime-main.4ebfe112.js.map",
-    "static/js/2.463ba0d1.chunk.js": "/static/js/2.463ba0d1.chunk.js",
-    "static/js/2.463ba0d1.chunk.js.map": "/static/js/2.463ba0d1.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.c9949c4d2143d95ab72bb5b3f487ae0a.js": "/precache-manifest.c9949c4d2143d95ab72bb5b3f487ae0a.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.870a4619.chunk.css.map": "/static/css/main.870a4619.chunk.css.map",
-    "static/js/2.463ba0d1.chunk.js.LICENSE.txt": "/static/js/2.463ba0d1.chunk.js.LICENSE.txt",
-    "static/media/styles.scss": "/static/media/background.37a75b54.jpg",
-    "static/media/logo.svg": "/static/media/logo.b1a38376.svg"
+    "main.css": "/calendar/static/css/main.01b7c106.chunk.css",
+    "main.js": "/calendar/static/js/main.ea7cf6dd.chunk.js",
+    "main.js.map": "/calendar/static/js/main.ea7cf6dd.chunk.js.map",
+    "runtime-main.js": "/calendar/static/js/runtime-main.c4248c1f.js",
+    "runtime-main.js.map": "/calendar/static/js/runtime-main.c4248c1f.js.map",
+    "static/js/2.463ba0d1.chunk.js": "/calendar/static/js/2.463ba0d1.chunk.js",
+    "static/js/2.463ba0d1.chunk.js.map": "/calendar/static/js/2.463ba0d1.chunk.js.map",
+    "index.html": "/calendar/index.html",
+    "precache-manifest.6d4cbbb11a68bd41ae65015bc6f98b01.js": "/calendar/precache-manifest.6d4cbbb11a68bd41ae65015bc6f98b01.js",
+    "service-worker.js": "/calendar/service-worker.js",
+    "static/css/main.01b7c106.chunk.css.map": "/calendar/static/css/main.01b7c106.chunk.css.map",
+    "static/js/2.463ba0d1.chunk.js.LICENSE.txt": "/calendar/static/js/2.463ba0d1.chunk.js.LICENSE.txt",
+    "static/media/styles.scss": "/calendar/static/media/background.37a75b54.jpg",
+    "static/media/logo.svg": "/calendar/static/media/logo.b1a38376.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4ebfe112.js",
+    "static/js/runtime-main.c4248c1f.js",
     "static/js/2.463ba0d1.chunk.js",
-    "static/css/main.870a4619.chunk.css",
-    "static/js/main.d341724a.chunk.js"
+    "static/css/main.01b7c106.chunk.css",
+    "static/js/main.ea7cf6dd.chunk.js"
   ]
 }
