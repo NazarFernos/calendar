@@ -44,7 +44,7 @@ const Header = () => {
                                         Home
                                     </NavLink></li>
                                 <li className="mobile-nav__item">
-                                    <NavLink to="/aboutUs" className="mobile-nav__link">
+                                    <NavLink to="/aboutUs" className="mobile-nav__link" activeClassName="mobile-nav__link_active">
                                         About Us
                                     </NavLink>
                                 </li>

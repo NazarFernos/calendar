@@ -221,16 +221,17 @@
                 opacity: 0.8;
                 text-transform: uppercase;
 
-                &:after {
-                  content: "";
-                  width: 9px;
-                  height: 9px;
-                  background-color: #fdd000;
-                  position: absolute;
-                  border-radius: 50%;
-                  bottom: 2%;
-                  right: 35%;
-                }
+              }
+
+              .mobile-nav__link_active::after {
+                content: "";
+                width: 9px;
+                height: 9px;
+                background-color: #fdd000;
+                position: absolute;
+                border-radius: 50%;
+                bottom: 2%;
+                right: 35%;
               }
             }
 
