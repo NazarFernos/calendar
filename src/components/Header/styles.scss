@@ -193,6 +193,7 @@
           @media (max-width: 768px) {
             width: 250px;
             right: -250px;
+            top: 50px;
           }
 
           @media (min-width: 796px) {
@@ -213,7 +214,7 @@
 
               .mobile-nav__link {
                 font-weight: 700;
-                line-height: 8.5rem;
+                line-height: 1.0rem;
                 vertical-align: middle;
                 color: black;
                 text-decoration: none;
@@ -230,8 +231,8 @@
                 background-color: #fdd000;
                 position: absolute;
                 border-radius: 50%;
-                bottom: 2%;
-                right: 35%;
+                bottom: 50%;
+                right: 37%;
               }
             }
 
