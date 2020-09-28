@@ -20,31 +20,30 @@ const DatePicker = () => {
     const dispatch = useDispatch();
 
     const showMonth = (months) => {
-        return {
+        dispatch ({
             type: calendarTypes.CHANGE_DATE,
             payload: shownDate.clone().add(months, 'months'),
-        }
+        })
     }
 
     const pick = (selectDate) => {
-
-        return {
+        dispatch({
             type: calendarTypes.SELECT_DATE,
             payload: selectDate
-        }
+        })
     }
 
     const toggleModal = () => {
-        return {
+        dispatch ({
             type: calendarTypes.MODAL_ACTIVITY,
             payload: !hideModal
-        }
+        })
     }
 
     const configModal = () => {
         return {
             hideModal: hideModal,
-            toggleModal: dispatch(toggleModal())
+            toggleModal: toggleModal()
         }
     };
 
@@ -52,18 +51,18 @@ const DatePicker = () => {
         <div className="date-picker">
             <ul className="date-picker__head">
                 <li>
-                    <Button filled onClick={() => dispatch(showMonth(-1))}>‹</Button>
+                    <Button filled onClick={() => showMonth(-1)}>‹</Button>
                 </li>
                 <li>
                     <div className="date-picker__month">{shownDate.format('MMMM YYYY')}</div>
                 </li>
                 <li>
-                    <Button filled onClick={() => dispatch(showMonth(1))}>›</Button>
+                    <Button filled onClick={() => showMonth(1)}>›</Button>
                 </li>
             </ul>
             <hr/>
-            <Days shownDate={shownDate} picked={selectDate} onPick={selectDate => dispatch(pick(selectDate))}
-                  toggleModal={() => dispatch(toggleModal())}/>
+            <Days shownDate={shownDate} picked={selectDate} onPick={selectDate => pick(selectDate)}
+                  toggleModal={() => toggleModal()}/>
             <hr/>
             <Week/>
             <hr/>
@@ -72,7 +71,7 @@ const DatePicker = () => {
                     <div className="d-flex">
                         <button
                             className="hideModal"
-                            onClick={() => dispatch(toggleModal())}>
+                            onClick={() => toggleModal()}>
                             ×
                         </button>
                     </div>
