@@ -17,7 +17,9 @@ const Header = () => {
             <div className="header-overlay">
                 <div className="nav-container">
 
-                    <img className="logo" src={logo} alt="logo"/>
+                    <NavLink to="/" >
+                        <img className="logo" src={logo} alt="logo"/>
+                    </NavLink>
 
                     <div className="nav-wrapper">
                         <ul className="nav">
