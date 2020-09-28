@@ -236,15 +236,13 @@
             }
 
           }
+        }
 
-
+        .mobile-nav--active {
+          transform: translateX(-110%);
         }
       }
     }
 
   }
-}
-
-.mobile-nav--active {
-  transform: translateX(-110%);
 }
